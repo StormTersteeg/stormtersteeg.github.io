@@ -151,8 +151,15 @@ a, a:hover, a:active {text-decoration:none !important}
 <body class="bg-dark-2" style="height:auto;min-height:100%">
 
 <nav class="navbar navbar-expand-lg bg-dark-2 text-white navbar-light position-sticky fixed-top border-bottom border-dark">
+    <a id="return-hook" class="navbar-brand d-none" href="https://www.dontdalon.com"><span class="material-icons">arrow_back</span></a>
     <span class="navbar-brand"><span class="material-icons mr-2">store</span>Apps</span>
 </nav>
+
+<script>
+if (anchorp.Get().length>0 && anchorp.Get()[0]=="from-dontdalon") {
+    document.getElementById("return-hook").classList.remove("d-none")
+}
+</script>
 
 <div class="container bg-dark-2">
     <div class="row mt-5">
